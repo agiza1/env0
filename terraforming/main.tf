@@ -3,9 +3,11 @@
        region = var.region
      }
 
-     resource "aws_s3_bucket" "my_bucket" {
-       bucket = var.bucket_name
-
+     resource "aws_s3_bucket" "s3_bucket" {
+      bucket = "${var.bucket_name}"
+      tags {
+    Name = "${var.bucket_name}"
+    env  = "${var.env}"
        lifecycle_rule {
          enabled = true
          expiration {
