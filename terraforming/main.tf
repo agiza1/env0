@@ -1,4 +1,4 @@
-``hcl
+
      provider "aws" {
        region = var.region
      }
@@ -16,4 +16,3 @@
 
      variable "region" {}
      variable "bucket_name" {}
-     ```
