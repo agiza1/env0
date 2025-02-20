@@ -5,8 +5,8 @@
 
      resource "aws_s3_bucket" "env0-bucket" {
       bucket = "${var.bucket_name}"
-     
-     }
+     acl    = "private"
+}
 
      variable "region" {}
      variable "bucket_name" {}
